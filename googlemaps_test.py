@@ -1,5 +1,6 @@
 import subprocess
 import json 
+import config
 
 def search_places(ambiguous_address):
     text = f'{{"textQuery" : "{ambiguous_address}"}}'
@@ -7,7 +8,7 @@ def search_places(ambiguous_address):
         "curl",
         "-X", "POST", "https://places.googleapis.com/v1/places:searchText",
         "-H", "Content-Type: application/json",
-        "-H", 'X-Goog-Api-Key: AIzaSyBleud1_wi7WpsveLreqq-sDSOL2nJKDPQ',
+        "-H", 'X-Goog-Api-Key: ' + config.google_api_key,
         "-H", 'X-Goog-FieldMask: places.displayName,places.formattedAddress,places.priceLevel',
         "-d", text
     ]

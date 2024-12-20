@@ -6,6 +6,7 @@ import tts
 from datetime import datetime
 import subprocess
 import json
+import config
 
 def search_places(pickup_location: str, drop_location: str):
     text1 = f'{{"textQuery" : "{pickup_location}"}}'
@@ -14,7 +15,7 @@ def search_places(pickup_location: str, drop_location: str):
         "curl",
         "-X", "POST", "https://places.googleapis.com/v1/places:searchText",
         "-H", "Content-Type: application/json",
-        "-H", 'X-Goog-Api-Key: AIzaSyBleud1_wi7WpsveLreqq-sDSOL2nJKDPQ',
+        "-H", 'X-Goog-Api-Key: ' + config.google_api_key,
         "-H", 'X-Goog-FieldMask: places.displayName,places.formattedAddress,places.priceLevel',
         "-d", text1
     ]
@@ -22,7 +23,7 @@ def search_places(pickup_location: str, drop_location: str):
         "curl",
         "-X", "POST", "https://places.googleapis.com/v1/places:searchText",
         "-H", "Content-Type: application/json",
-        "-H", 'X-Goog-Api-Key: AIzaSyBleud1_wi7WpsveLreqq-sDSOL2nJKDPQ',
+        "-H", 'X-Goog-Api-Key: ' + config.google_api_key,
         "-H", 'X-Goog-FieldMask: places.displayName,places.formattedAddress,places.priceLevel',
         "-d", text2
     ]

@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="WIwVcM9bRKyjhshWP0I-">
+    <mxGraphModel dx="1644" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="djJFe9bqhi8zieh9U9bp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-1" target="djJFe9bqhi8zieh9U9bp-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-1" target="djJFe9bqhi8zieh9U9bp-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-1" value="LLama 3.2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-2" target="djJFe9bqhi8zieh9U9bp-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-10" value="!st to ask" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="djJFe9bqhi8zieh9U9bp-9">
+          <mxGeometry x="-0.0429" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-2" target="djJFe9bqhi8zieh9U9bp-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-2" target="djJFe9bqhi8zieh9U9bp-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-2" target="djJFe9bqhi8zieh9U9bp-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-2" value="What to ask?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-3" value="How to ask?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-8" target="djJFe9bqhi8zieh9U9bp-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-8" value="Pickup and drop places" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-12" value="Time, etc" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-14" value="Vector DB containing main areas, sub areas, landmarks" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="-300" y="215" width="90" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-15" target="djJFe9bqhi8zieh9U9bp-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="djJFe9bqhi8zieh9U9bp-15" target="djJFe9bqhi8zieh9U9bp-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-15" value="Rag model confirms the places with the vector db and clarifies with the user." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-18" value="Then calculate fare.&amp;nbsp;&lt;div&gt;[I guess for this we need the help of google maps]&lt;/div&gt;&lt;div&gt;&amp;nbsp;[Need to research on this like how existing cab services calculate fare]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-165" y="340" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-21" value="No of passengers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="djJFe9bqhi8zieh9U9bp-23" value="type of vehicle" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

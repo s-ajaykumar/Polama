@@ -1,0 +1,13 @@
+User: want to go from kalavasal to simmakkal
+
+assistant: **Required details:**
+
+a) Pickup location (Kalavasal)
+b) Drop location (Simmakkal)
+c) Date and Time
+d) Number of passengers
+e) Type of cab
+
+Please provide the required details. I'll assist you with booking a cab.
+
+

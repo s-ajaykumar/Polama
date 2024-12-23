@@ -8,43 +8,100 @@ import subprocess
 import json
 import config
 
-def search_places(pickup_location: str, drop_location: str):
-    text1 = f'{{"textQuery" : "{pickup_location}"}}'
-    text2 = f'{{"textQuery" : "{drop_location}"}}'
-    curl_command1 = [
-        "curl",
-        "-X", "POST", "https://places.googleapis.com/v1/places:searchText",
-        "-H", "Content-Type: application/json",
-        "-H", 'X-Goog-Api-Key: ' + config.google_api_key,
-        "-H", 'X-Goog-FieldMask: places.displayName,places.formattedAddress,places.priceLevel',
-        "-d", text1
-    ]
-    curl_command2 = [
-        "curl",
-        "-X", "POST", "https://places.googleapis.com/v1/places:searchText",
-        "-H", "Content-Type: application/json",
-        "-H", 'X-Goog-Api-Key: ' + config.google_api_key,
-        "-H", 'X-Goog-FieldMask: places.displayName,places.formattedAddress,places.priceLevel',
-        "-d", text2
-    ]
-    try:
-        response1 = subprocess.run(curl_command1, capture_output = True, text = True)
-        response2 = subprocess.run(curl_command2, capture_output = True, text = True)
-        json_response1 = json.loads(response1.stdout)
-        json_response2 = json.loads(response2.stdout)
-        final_out = f"pickup_location: {json_response1['places'][0]['formattedAddress']}\ndrop_location: {json_response2['places'][0]['formattedAddress']}" 
-        return final_out
-    except Exception as e:
-        print(response1.stderr, response2.stderr)
-        print(e)    
-        return e
+def search_places(pickup_location: str = None, drop_location: str = None):
+    if drop_location is None:
+        print("Getting pickup location only...")
+        text = f"""{{
+        "address": {{
+            "regionCode": "IN",
+            "addressLines": ["{pickup_location}"]
+        }}
+    }}"""
+        curl_command = [
+            "curl",
+            "-X", "POST", "https://addressvalidation.googleapis.com/v1:validateAddress?key="+config.google_api_key,
+            "-H", "Content-Type: application/json",
+            "-d", text
+        ]
+        
+        try:
+            response = subprocess.run(curl_command, capture_output = True, text = True)
+            json_response = json.loads(response.stdout)
+            print(json_response)
+        except Exception as e:
+            print(response.stderr)
+            print(e)
+            
+    if pickup_location is None:
+        print("Getting drop location only...")
+        text = f"""{{
+        "address": {{
+            "regionCode": "IN",
+            "addressLines": ["{drop_location}"]
+        }}
+    }}"""
+        curl_command = [
+            "curl",
+            "-X", "POST", "https://addressvalidation.googleapis.com/v1:validateAddress?key="+config.google_api_key,
+            "-H", "Content-Type: application/json",
+            "-d", text
+        ]
+        
+        try:
+            response = subprocess.run(curl_command, capture_output = True, text = True)
+            json_response = json.loads(response.stdout)
+            print(json_response)
+        except Exception as e:
+            print(response.stderr)
+            print(e) 
+        
+    else:
+        print("Getting both pickup and drop locations...")
+        text1 = f"""{{
+        "address": {{
+            "regionCode": "IN",
+            "addressLines": ["{pickup_location}"]
+        }}
+    }}"""
+        text2 = f"""{{
+            "address": {{
+                "regionCode": "IN",
+                "addressLines": ["{drop_location}"]
+                }}
+            }}"""
+        curl_command1 = [
+            "curl",
+            "-X", "POST", "https://addressvalidation.googleapis.com/v1:validateAddress?key="+config.google_api_key,
+            "-H", "Content-Type: application/json",
+            "-d", text1
+        ]
+        curl_command2 = [
+            "curl",
+            "-X", "POST", "https://addressvalidation.googleapis.com/v1:validateAddress?key="+config.google_api_key,
+            "-H", "Content-Type: application/json",
+            "-d", text2
+        ]
+        try:
+            response1 = subprocess.run(curl_command1, capture_output = True, text = True)
+            response2 = subprocess.run(curl_command2, capture_output = True, text = True)
+            json_response1 = json.loads(response1.stdout)
+            json_response2 = json.loads(response2.stdout)
+            print(json_response1,"\n\n", json_response2)
+            if json_response1['result']['verdict']['inputGranularity'] == 'PREMISE' and json_response2['result']['verdict']['validationGranularity'] == 'PREMISE' and json_response1['result']['verdict']['geocodeGranularity'] == 'PREMISE':
+                geocodes = json_response1['result']['geocode']['location']
+                print("Both locations are valid\n\n")
+                print("Geocodes: ", geocodes)
+            if json_response1['result']['verdict']['inputGranularity'] == 'OTHER' or json_response1['result']['verdict']['validationGranularity'] == 'OTHER':
+                print(f"Can you tell me more specifically in {pickup_location}? or any landmarks nearby?\n\n")
+            if json_response2['result']['verdict']['inputGranularity'] == 'OTHER' or json_response2['result']['verdict']['validationGranularity'] == 'OTHER':
+                return print(f"Can you tell me more specifically in the {drop_location}? or any landmarks nearby?\n\n")
+        except Exception as e:
+            print(response1.stderr, response2.stderr)
+            print(e)
     
     
 def generate(user):
-    instruction = """You are a cab booking assistant.
-    You will be provided with a user question. Your task is to get and verify the pickup and drop locations. Use the available tools to verify the locations."""
-    
-    
+    instruction = """Your task is to verify the pickup and drop locations. Use the available tools to verify the locations."""
     
     #LLM
     LLM_start_time = datetime.now()
@@ -83,4 +140,4 @@ def main(user):
     
     
 if __name__ == "__main__":
-    main("want to go from kalavasal to simmakkal")
+    main("bro near alpha hospital madurai want to go to simmakkal how much bro")

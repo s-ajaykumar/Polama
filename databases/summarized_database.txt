@@ -1,0 +1,30 @@
+User:
+{'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': "haaa bro I'm near salakuddi wanna go to kocha complex", 'assistant': []}
+Assistant:
+{'pickup_location': 'salakuddi', 'drop_location': 'kocha complex', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': None, 'user_input': "haaa bro I'm near salakuddi wanna go to kocha complex", 'assistant': ['What is your preferred pickup time', 'Which cab type would you like auto sedan etcetera', 'Tell me the number of passengers travelling bro']}
+
+
+User:
+{'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': "haaa bro I'm near salakuddi wanna go to kocha complex", 'assistant': []}
+Assistant:
+{'pickup_location': 'Salakuddi', 'drop_location': 'Kocha Complex', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': "haaa bro I'm near salakuddi wanna go to kocha complex", 'assistant': ['What is your preferred pickup time', 'Which cab type would you like auto sedan etcetera', 'Tell me the number of passengers travelling bro']}
+
+
+User:
+{'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': 'haaa ariund 10pm bro', 'assistant': []}
+Assistant:
+{"pickup_location": "None", "drop_location": "None", "pickup_time": "None", "cab_type": "None", "number of passengers": "None", "user_input": "haaa ariund 10pm bro", "assistant": ["What is your preferred pickup time", "Which cab type would you like auto sedan etcetera", "Tell me the location and number of passengers travelling bro"]}
+
+
+User:
+{'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': "ahh bro i'm near salakuddi wanna go to kocha complex", 'assistant': []}
+Assistant:
+{"pickup_location": "salakuddi", "drop_location": "kocha complex", "pickup_time": "None", "cab_type": "None", "number of passengers": "None", "user_input": "ahh bro i'm near salakuddi wanna go to kocha complex", "assistant": ["What is your preferred pickup time", "Which cab type would you like auto sedan etcetera", "Tell me the number of passengers travelling bro"]}
+
+
+User:
+{'pickup_location': 'salakuddi', 'drop_location': 'kocha complex', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': 'around 11 am bro', 'assistant': []}
+Assistant:
+{"pickup_location": "salakuddi", "drop_location": "kocha complex", "pickup_time": "Around 11 am", "cab_type": "None", "number of passengers": "None", "user_input": "around 11 am bro", "assistant": ["What is your preferred pickup time", "Which cab type would you like auto sedan etcetera", "Tell me the number of passengers travelling bro"]}
+
+

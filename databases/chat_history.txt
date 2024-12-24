@@ -1,0 +1,3 @@
+{"country" : "India", "State" : "Tamil Nadu", "City" : "Madurai", "pickup_location": "apollo hospital", "drop_location": "munichalai", "pickup_date" : "today", "pickup_time": "None", "cab_type": "auto", "number of passengers": 3, "user_input": "None"}
+
+

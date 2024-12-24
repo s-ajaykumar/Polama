@@ -1522,3 +1522,67 @@ User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_
 assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5pm", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : ["What is your preferred cab type?"]}
 
 
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5:00pm", "cab_type" : ["None"], "user_input" : "5 pm bro", "assistant" : ["What is your preferred cab type (e.g. auto, sedan etc)?"]}
+
+
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5pm", "cab_type" : "auto", "user_input" : "5 pm bro", "assistant" : ["How many passengers will be travelling?"]}
+
+
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5pm", "cab_type" : ["auto", "sedan"], "user_input" : "at 5 pm bro", "assistant" : []}
+
+
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5 pm", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : ["What is your preferred pickup time?", "Which cab type would you like (e.g. auto, sedan etc)?"]}
+
+
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "number of passengers" : "None", "user_input" : "5 pm bro and 3 persons bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : ["What is your preferred pickup time? (e.g. 2pm, 5pm, etc.)", "Specific time in 24 hour format?", "Time of day?"], "cab_type" : ["Which cab type would you like? (e.g. auto, sedan, etc.)", "Can I know the cab preference?", "Would you prefer a specific cab type?"], "number of passengers" : ["Tell me the number of passengers travelling.", "How many people will be travelling?", "Number of persons?"], "user_input" : "5 pm bro and 3 persons bro", "assistant" : []}
+
+
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "number of passengers" : "None", "user_input" : "5 pm bro and 3 persons bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5 pm", "cab_type" : "None", "number of passengers" : "3", "user_input" : "5 pm bro and 3 persons bro", "assistant" : ["What is your preferred cab type? (e.g. auto, sedan)"]}
+
+
+User: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "None", "cab_type" : "None", "number of passengers" : "None", "user_input" : "5 pm bro and 3 persons bro", "assistant" : []} 
+
+assistant: {"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : ["What is your preferred pickup time (in 24 hour format)?"], "cab_type" : ["Which cab type would you like? (e.g. auto, sedan, etc.)"], "number of passengers" : [3], "user_input" : "5 pm bro and 3 persons bro", "assistant" : []}
+
+
+
+
+user: {'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': 'None', 'assistant': []}
+
+question: haaa bro I'm near salakuddi wanna go to kocha complex
+assistant: model='llama3.2:3b' created_at='2024-12-24T08:24:06.119353Z' done=True done_reason='stop' total_duration=55499814201 load_duration=39151333 prompt_eval_count=177 prompt_eval_duration=5697000000 eval_count=29 eval_duration=49760000000 message=Message(role='assistant', content=' Pickup location is Salakuddi, \ndrop location is Kocha Complex, \nCan you tell me the time you want to travel?', images=None, tool_calls=None)
+
+user: {'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': 'None', 'assistant': []}
+
+question: haaa ariund 10pm bro
+assistant: What's the pickup location?
+
+user: {'pickup_location': 'None', 'drop_location': 'None', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': 'haaa ariund 10pm bro', 'assistant': ['What is your preferred pickup time', 'Which cab type would you like auto sedan etcetera', 'Tell me the location and number of passengers travelling bro']}
+
+question: ahh bro i'm near salakuddi wanna go to kocha complex
+assistant: You're near Salakuddi, is that correct?
+
+**Please tell me the pickup time (around what time you'd like to be picked up),**
+**and Which cab type would you like (auto, sedan, etcetera)?**
+
+(I'll add the locations once I get your confirmations)
+
+user: {'pickup_location': 'salakuddi', 'drop_location': 'kocha complex', 'pickup_time': 'None', 'cab_type': 'None', 'number of passengers': 'None', 'user_input': "ahh bro i'm near salakuddi wanna go to kocha complex", 'assistant': ['What is your preferred pickup time', 'Which cab type would you like auto sedan etcetera', 'Tell me the number of passengers travelling bro']}
+
+question: around 11 am bro
+assistant: {'pickup_location': 'salakuddi', 'drop_location': 'kocha complex', 'pickup_time': 'around 11 am', 'cab_type': None, 'number of passengers': None, 'user_input': "ahh bro i'm near salakuddi wanna go to kocha complex", 'assistant': ['What is your preferred pickup time', 'Which cab type would you like auto sedan etcetera', 'Tell me the number of passengers travelling bro']}
+
+{'pickup_location': 'salakuddi', 'drop_location': 'kocha complex', 'pickup_time': 'around 11 am', 'cab_type': None, 'number of passengers': None}
+

@@ -1952,3 +1952,136 @@ Time taken by LLM: 0:00:32.108909
 
 --------------------------------------------------
 
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T05:05:42.49597Z' done=True done_reason='stop' total_duration=104629992532 load_duration=14194825125 prompt_eval_count=398 prompt_eval_duration=63290000000 eval_count=73 eval_duration=25542000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5:00pm", "cab_type" : ["None"], "user_input" : "5 pm bro", "assistant" : ["What is your preferred cab type (e.g. auto, sedan etc)?"]}', images=None, tool_calls=None)
+Time taken by LLM: 0:01:44.695047
+
+--------------------------------------------------
+
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T05:32:46.261748Z' done=True done_reason='stop' total_duration=59626227311 load_duration=5405039595 prompt_eval_count=465 prompt_eval_duration=44868000000 eval_count=63 eval_duration=8571000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5pm", "cab_type" : "auto", "user_input" : "5 pm bro", "assistant" : ["How many passengers will be travelling?"]}', images=None, tool_calls=None)
+Time taken by LLM: 0:00:59.649437
+
+--------------------------------------------------
+
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T05:34:20.528588Z' done=True done_reason='stop' total_duration=37599787413 load_duration=31612430 prompt_eval_count=459 prompt_eval_duration=28087000000 eval_count=62 eval_duration=9474000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5pm", "cab_type" : ["auto", "sedan"], "user_input" : "at 5 pm bro", "assistant" : []}', images=None, tool_calls=None)
+Time taken by LLM: 0:00:37.603925
+
+--------------------------------------------------
+
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T05:43:10.503023Z' done=True done_reason='stop' total_duration=45461976542 load_duration=32179592 prompt_eval_count=494 prompt_eval_duration=35412000000 eval_count=79 eval_duration=10016000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5 pm", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : ["What is your preferred pickup time?", "Which cab type would you like (e.g. auto, sedan etc)?"]}', images=None, tool_calls=None)
+Time taken by LLM: 0:00:45.466039
+
+--------------------------------------------------
+
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T05:47:43.837307Z' done=True done_reason='stop' total_duration=54287659889 load_duration=25190375 prompt_eval_count=522 prompt_eval_duration=33701000000 eval_count=158 eval_duration=20559000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : ["What is your preferred pickup time? (e.g. 2pm, 5pm, etc.)", "Specific time in 24 hour format?", "Time of day?"], "cab_type" : ["Which cab type would you like? (e.g. auto, sedan, etc.)", "Can I know the cab preference?", "Would you prefer a specific cab type?"], "number of passengers" : ["Tell me the number of passengers travelling.", "How many people will be travelling?", "Number of persons?"], "user_input" : "5 pm bro and 3 persons bro", "assistant" : []}', images=None, tool_calls=None)
+Time taken by LLM: 0:00:54.291301
+
+--------------------------------------------------
+
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T06:10:24.388466Z' done=True done_reason='stop' total_duration=40078415444 load_duration=42034752 prompt_eval_count=522 prompt_eval_duration=23994000000 eval_count=86 eval_duration=16039000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5 pm", "cab_type" : "None", "number of passengers" : "3", "user_input" : "5 pm bro and 3 persons bro", "assistant" : ["What is your preferred cab type? (e.g. auto, sedan)"]}', images=None, tool_calls=None)
+Time taken by LLM: 0:00:40.090386
+
+--------------------------------------------------
+
+instruction:
+You are a cab booking assistant.
+    You will be provided with a user question. Your task is to get the required details to book a cab and once you got all the required details, then respond with the below json structure. 
+    **Required details:**
+    a) Pickup and Drop locations
+    b) Date and Time
+    c) Number of passengers
+    d) Type of cab
+    If asking details, ask them one by one in short.
+    Before asking questions, read through the chat_history carefully and see if the details related to the current booking are already given.
+    If all the details are already given, you can respond with the below json structure. If not, you need to ask the required details.
+    Remember while asking questions, ask one question at a time and wait for the user to respond before asking the next question.
+    Your response must NOT contain any special characters or punctuations or numbers.
+AI:
+model='llama3.2:3b' created_at='2024-12-24T06:14:46.827457Z' done=True done_reason='stop' total_duration=17877492132 load_duration=49290590 prompt_eval_count=522 prompt_eval_duration=653000000 eval_count=97 eval_duration=17156000000 message=Message(role='assistant', content='{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : ["What is your preferred pickup time (in 24 hour format)?"], "cab_type" : ["Which cab type would you like? (e.g. auto, sedan, etc.)"], "number of passengers" : [3], "user_input" : "5 pm bro and 3 persons bro", "assistant" : []}', images=None, tool_calls=None)
+Time taken by LLM: 0:00:17.884753
+
+--------------------------------------------------
+

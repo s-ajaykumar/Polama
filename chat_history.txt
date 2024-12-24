@@ -1,1 +1,0 @@
-{"pickup_location" : "Teppakulam", "drop_location" : "Anannagar", "pickup_time" : "5pm", "cab_type" : "None", "user_input" : "5 pm bro", "assistant" : ["What is your preferred cab type?"]}

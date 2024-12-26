@@ -35,35 +35,51 @@ end_time = datetime.now()
 
 print("Time taken by summarizeLLM: ", end_time - start_time)'''
 
-LLM_instruction = """You are a question asker. 
-You will be provided with a JSON structure and a user query. Read through them carefully. Your task is to:
 
-Fill the JSON from the query. If any detail is missing, Ask them. Ask one question at a time.
-
-**while_asking_questions**
-Ask in a single sentence within 10 to 15 words.
-If asking cab type, provide the cab_types: auto, innova, swift desire.
-**while_asking_questions**
-
-Your response must NOT contain any special characters or punctuations or numbers. 
-"""
-
-#Don't repeat a question if the detail is already provided.
-text = "at 10 pm"
-with open('databases/AI_response_database.txt', 'r') as f:
-    AI = f.read()
 with open('databases/chat_history.txt', 'r') as f:
     content = f.read()
 previous_json = json.loads(content)
 del previous_json["user_input"]
-input = f"{previous_json}\nuser_query: {text}"
-print(input,"\n\n")
+#Fill the "None" values with details from the user query (or) from asking a question. 
 
+LLM_instruction = f"""You are a cab booking assitant. 
+You will be provided with a JSON structure and a user query. Read through them carefully. Your task is to:
+
+Still if there are "None" values to be filled in the JSON structure, fill them using the user query if details are present in it and if details are not present in the user query, ask the details to be filled. 
+Else, if all the details are present in the user query, give a thankyou and end the conversation.
+If asking cab type, list the cab_types: auto, innova, swift desire and ask to choose.
+
+Do NOT ask for already provided details.
+If a detail is provided, do NOT ask for specificity of it and just keep it as it is.
+Do NOT ask extra questions.
+Ask one question at a time and ask it in a single sentence within 10 to 15 words.
+Your response must NOT contain any special characters or punctuations or numbers. 
+
+json_structure:
+{previous_json}
+"""
+details = f"pickup_location: {previous_json['pickup_location']}\ndrop_location: {previous_json['drop_location']}\npickup_time: {previous_json['pickup_time']}\nnumber of passengers: {previous_json['number of passengers']}\ncab_type: {previous_json['cab_type']}\n"
+i = f"""User provided you with some cab booking details in the previous conversations. Your task is to:
+Compare the user provided details and the user query with the required details, check if any required detail is missing or not. 
+[required_details: Pickup and Drop locations, PickupTime, Number of passengers, Type of cab]
+If any required details are missing in the user provided details then ask them one at a time. Ask it in less than 15 words.
+If not a single required detail is missing in the user provided details then don't ask any question, thank the user ending the conversation in less than 15 words.
+
+user provided details:
+{details}
+"""
+print(i,"\n\n")
+#Don't repeat a question if the detail is already provided.
+text = "3 bro"
+with open('databases/AI_response_database.txt', 'r') as f:
+    AI = f.read()
 start_time = datetime.now()
+
 response = chat(
     model = "llama3.2:3b",
-    messages = [{'role' : 'system', 'content' : LLM_instruction}, {"role" : "assistant", "content" : AI}, {'role' : 'user', 'content' : input}],
-    keep_alive = '59m'
+    messages = [{'role' : 'system', 'content' : i}, {"role" : "assistant", "content" : AI}, {'role' : 'user', 'content' : text}],
+    keep_alive = '59m',
+    options = {'temperature' : 0}
 )
 
 print(response['message']['content'], "\n")

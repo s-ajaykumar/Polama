@@ -1,2 +1,0 @@
-
-{"pickup_location": "None", "drop_location": "None", "pickup_time": "None", "cab_type": "None", "number of passengers": "None", "user_input": "None"}

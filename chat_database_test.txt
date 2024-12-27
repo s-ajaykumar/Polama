@@ -1,0 +1,16 @@
+user: Wanna go from simmakkal to teppakulam
+assistant: What time would you like to travel? 
+
+
+user: ahh at 5pm
+assistant: What type of cab do you need? 
+
+
+user: ahh auto bro
+assistant: How many passengers will be travelling? 
+
+
+user: 3
+assistant: Thank you.  
+
+

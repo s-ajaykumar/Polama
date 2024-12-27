@@ -1,1 +1,0 @@
-{"pickup_location": "simmakkal", "drop_location": "Kalavasal", "pickup_time": "10am", "cab_type": "auto", "number of passengers": "None", "user_input": "None"}
